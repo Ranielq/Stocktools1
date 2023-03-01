@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>StockTools</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="navbar.css"/>
+
+</head>
+<body style="background: rgb(46,161,218);
+background: linear-gradient(90deg, rgba(46,161,218,1) 33%, rgba(20,85,160,1) 75%);">
+
+
+<div class="topnav">
+    <a href="registrar_herramientas.html">Añadir herramientas</a>
+    <a href="ver_herramientas.html">Ver herramientas</a>
+    <a href="registrar_danados.html">Registrar dañados</a>
+    <a href="ver_danados.html">Ver items Dañados</a>
+    <a href="ver_herramientas_en_almacen.html">Herramientas en almacen</a>
+    <a href="registrar_obra.html">Obras</a>
+    <a href="ver_herramientas_en_obra.html">Herramientas en obra</a>
+    <a href="ver_obra.html">Lista Obras</a>
+    <a href="registrar_usuario.html">Registro de usuario</a>
+    <a class="btn-close" href="iniciar_sesion.html"></a>
+
+</div>
+<div class="container text-center">
+    <h1>Registro de obras</h1>
+    <h4><a class="btn btn-primary" href="index.html">Volver al Index</a></h4>
+
+   
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <h5>{{ r }}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    
+    
+    
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <h5>{{ r2 }}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    
+
+    <form action="/r_obra" method="post">
+        
+
+        <input type="text" name="txtubi" placeholder="ubicacion" required class="form-control form-control-lg"/>
+
+        <input type="number" name="txtcant" min="1" placeholder="cantidad" required
+               class="form-control form-control-lg"/>
+
+        <input type="date" name="inicio" placeholder="fecha inicio" required class="form-control form-control-lg"/>
+
+        <input type="date" name="final" placeholder="fecha fin" required class="form-control form-control-lg"/>
+
+        <input type="text" name="txtid_h" placeholder="herramienta" required class="form-control form-control-lg"/>
+
+        <input type="submit" value="Guardar Datos" class="btn btn-primary btn-lg" style="width:100%"/>
+
+    </form>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+</html>
